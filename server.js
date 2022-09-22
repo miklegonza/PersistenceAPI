@@ -17,9 +17,9 @@ app.get('/api', (req, res) => {
 // Insertar
 app.post('/api', async (req, res) => {
     const user = {
-        id: req.query.id,
-        name: req.query.name,
-        last: req.query.last
+        id: req.body.id,
+        name: req.body.name,
+        last: req.body.last
     };
 
     try {
@@ -110,8 +110,8 @@ app.get('/api/search', async (req, res) => {
 app.put('/api/:id', async (req, res) => {
     const id = req.params.id;
     const user = {
-        name: req.query.name,
-        last: req.query.last
+        name: req.body.name,
+        last: req.body.last
     };
 
     try {
